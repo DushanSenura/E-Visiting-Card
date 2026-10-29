@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="140" viewBox="0 0 480 140" role="img" aria-label="Lee Scents">
+  <title>Lee Scents</title>
+  <text x="240" y="70" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, 'Times New Roman', serif" font-size="52" font-weight="600" letter-spacing="15" fill="#0F2922">LEE SCENTS</text>
+  <line x1="150" y1="92" x2="200" y2="92" stroke="#C5A46D" stroke-width="1.2"/>
+  <line x1="280" y1="92" x2="330" y2="92" stroke="#C5A46D" stroke-width="1.2"/>
+  <circle cx="240" cy="92" r="2.4" fill="#C5A46D"/>
+  <text x="240" y="122" text-anchor="middle" font-family="'Segoe UI', Arial, Helvetica, sans-serif" font-size="14" font-weight="600" letter-spacing="6" fill="#8A6934">PREMIUM AROMATICS</text>
+</svg>

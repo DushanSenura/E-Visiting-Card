@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-ivory font-sans text-ink antialiased;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-gold ring-offset-2 ring-offset-ivory;
+  }
+
+  ::selection {
+    @apply bg-champagne text-forest-deep;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply rounded-card border border-white/70 bg-white/65 shadow-card backdrop-blur-xl;
+    /* Thin inner highlight for a soft glass edge */
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.8),
+      0 0 0 1px rgba(23, 61, 50, 0.06),
+      0 12px 40px -12px rgba(15, 41, 34, 0.14);
+  }
+
+  .eyebrow {
+    @apply text-[0.66rem] font-bold uppercase tracking-[0.26em] text-gold-ink;
+  }
+
+  .skip-link {
+    @apply fixed left-4 top-4 z-[100] -translate-y-24 rounded-xl bg-forest px-4 py-3 text-sm font-semibold text-ivory shadow-lift transition-transform focus:translate-y-0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
