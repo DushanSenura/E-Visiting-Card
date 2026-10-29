@@ -1,6 +1,7 @@
-import { Globe, Mail, MapPin, MessageCircle, Navigation, Phone, type LucideIcon } from "lucide-react";
+import { Copy, Globe, Mail, MapPin, MessageCircle, MessageSquareText, Navigation, Phone, type LucideIcon } from "lucide-react";
 import { profileConfig } from "../config/profile";
 import { contactLinks } from "../config/resolved";
+import { useCopyWeChat } from "../hooks/useCopyWeChat";
 import { displayUrl } from "../utils/validation";
 import { ActionButton } from "./ui/ActionButton";
 import { SectionCard } from "./ui/SectionCard";
@@ -11,6 +12,9 @@ interface InfoRow {
   value: string;
   icon: LucideIcon;
   href?: string | null;
+  /** Used instead of a link, e.g. copying the WeChat ID */
+  onClick?: () => void;
+  actionLabel?: string;
   external?: boolean;
 }
 
@@ -27,9 +31,10 @@ function InfoItem({ row }: { row: InfoRow }) {
           {row.value}
         </span>
       </span>
+      {row.onClick && <Copy className="ml-auto mt-3 size-4 shrink-0 text-gold-ink" strokeWidth={1.9} aria-hidden />}
     </>
   );
-  const rowClass = "flex items-start gap-3.5";
+  const rowClass = "flex min-h-11 items-start gap-3.5";
 
   return (
     <li className="py-3.5 first:pt-0 last:pb-0">
@@ -42,6 +47,10 @@ function InfoItem({ row }: { row: InfoRow }) {
         >
           {content}
         </a>
+      ) : row.onClick ? (
+        <button type="button" onClick={row.onClick} aria-label={row.actionLabel} className={`group ${rowClass} w-full rounded-xl text-left`}>
+          {content}
+        </button>
       ) : (
         <div className={rowClass}>{content}</div>
       )}
@@ -51,6 +60,7 @@ function InfoItem({ row }: { row: InfoRow }) {
 
 export function BusinessInfo() {
   const { person, company, contact } = profileConfig;
+  const copyWeChat = useCopyWeChat();
 
   const rows: InfoRow[] = [];
   if (contact.phoneDisplay.trim()) {
@@ -58,6 +68,16 @@ export function BusinessInfo() {
   }
   if (contactLinks.whatsappE164 && contactLinks.whatsappE164 !== contactLinks.phoneE164) {
     rows.push({ key: "whatsapp", label: "WhatsApp", value: contactLinks.whatsappE164, icon: MessageCircle, href: contactLinks.whatsapp, external: true });
+  }
+  if (contactLinks.wechat && copyWeChat) {
+    rows.push({
+      key: "wechat",
+      label: "WeChat",
+      value: contactLinks.wechat,
+      icon: MessageSquareText,
+      onClick: copyWeChat,
+      actionLabel: `Copy WeChat ID ${contactLinks.wechat}`,
+    });
   }
   if (contactLinks.email) {
     rows.push({ key: "email", label: "Email", value: contactLinks.email, icon: Mail, href: contactLinks.mailto });

@@ -1,6 +1,8 @@
 /** Icons available for service cards. Add a name here and in `src/components/icons.ts` to use a new one. */
 export type ServiceIconName =
   | "Sparkles"
+  | "Bubbles"
+  | "Factory"
   | "Droplets"
   | "FlaskConical"
   | "Headset"
@@ -50,6 +52,8 @@ export interface ProfileConfig {
     whatsapp: string;
     /** Optional greeting pre-filled in WhatsApp */
     whatsappMessage: string;
+    /** WeChat ID. Visitors can tap to copy it. Empty = hidden. */
+    wechat: string;
     email: string;
     address: string;
     country: string;

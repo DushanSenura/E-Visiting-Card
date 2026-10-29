@@ -48,6 +48,7 @@ the card, the business info, the vCard, the page title and the social previews.
 | `contact.phoneDisplay` | The number as it should look on screen, e.g. `0777 123 456` |
 | `contact.phoneInternational` | Optional. Leave empty and it is worked out from `phoneDisplay` |
 | `contact.whatsapp` | Optional. Leave empty to use the same number for WhatsApp |
+| `contact.wechat` | WeChat ID. Tapping WeChat copies the ID so visitors can paste it in WeChat › Add Contacts. Leave empty to hide it |
 
 Sri Lankan numbers are converted automatically:
 `0777123456` → `tel:+94777123456` and `https://wa.me/94777123456`.

@@ -56,7 +56,12 @@ export function buildVCard(config: ProfileConfig): string {
   if (resolved.address) {
     lines.push(`ADR;TYPE=WORK:;;${escapeValue(resolved.address)};;;;${escapeValue(contact.country)}`);
   }
-  lines.push(`NOTE:${escapeValue(company.summary)}`, "END:VCARD");
+  if (resolved.wechat) {
+    // X-WECHAT is read by some apps; the note keeps the ID visible in every address book
+    lines.push(`X-WECHAT:${escapeValue(resolved.wechat)}`);
+  }
+  const note = [company.summary, resolved.wechat && `WeChat: ${resolved.wechat}`].filter(Boolean).join("\n");
+  lines.push(`NOTE:${escapeValue(note)}`, "END:VCARD");
 
   return lines.map(foldLine).join("\r\n") + "\r\n";
 }

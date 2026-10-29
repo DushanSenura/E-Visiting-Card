@@ -9,6 +9,8 @@ export interface ContactLinks {
   /** wa.me link, null when no valid WhatsApp number */
   whatsapp: string | null;
   whatsappE164: string | null;
+  /** WeChat ID, null when not configured (WeChat has no reliable web link, so the UI copies it) */
+  wechat: string | null;
   /** mailto: link, null when no valid email */
   mailto: string | null;
   email: string | null;
@@ -45,6 +47,7 @@ export function buildContactLinks(config: ProfileConfig): ContactLinks {
       ? `https://wa.me/${whatsappDigits}${whatsappMessage ? `?text=${encodeURIComponent(whatsappMessage)}` : ""}`
       : null,
     whatsappE164: whatsappDigits ? `+${whatsappDigits}` : null,
+    wechat: usable(contact.wechat),
     mailto: email ? `mailto:${email}` : null,
     email,
     maps: mapsQuery ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapsQuery)}` : null,

@@ -40,11 +40,12 @@ export const profileConfig: ProfileConfig = {
   company,
 
   contact: {
-    phoneDisplay: "+94 77 7341 0302",
+    phoneDisplay: "+94 77 734 1302",
     phoneInternational: "",
-    whatsapp: "+94 77 7341 0302",
+    whatsapp: "+94 77 734 1302",
     whatsappMessage: `Hello ${person.name}, I found your ${company.name} digital card.`,
-    email: "",
+    wechat: "lesly_19710802",
+    email: "leslie@leescents.com",
     address: "X, XXXXXX, XXXXXXX",
     country: "Sri Lanka",
     countryCallingCode: "94",
@@ -59,24 +60,29 @@ export const profileConfig: ProfileConfig = {
 
   services: [
     {
-      title: "Fragrance Solutions",
-      description: "Premium fragrance and aromatic solutions for personal care and related applications.",
+      title: "Fine Perfumes",
+      description: "Premium fine fragrances and perfume compositions.",
       icon: "Sparkles",
     },
     {
       title: "Essential Oils",
-      description: "Selected aromatic and essential oil solutions.",
+      description: "Selected aromatic and essential oils.",
       icon: "Droplets",
     },
     {
-      title: "Cosmetic Ingredients",
-      description: "Quality ingredients suitable for cosmetic and personal-care formulations.",
+      title: "Glycerin Bathing Bar Bases",
+      description: "Glycerin soap bases for bathing bar production.",
+      icon: "Bubbles",
+    },
+    {
+      title: "Cosmetic Raw Materials & High-End Actives",
+      description: "Cosmetic raw materials and high-end active ingredients for personal-care formulations.",
       icon: "FlaskConical",
     },
     {
-      title: "Product Support",
-      description: "Professional support for customers sourcing fragrance and related materials.",
-      icon: "Headset",
+      title: "New Product Development & Contract Manufacturing",
+      description: "New product development and contract manufacturing for skin care and hair care.",
+      icon: "Factory",
     },
   ],
 
@@ -87,7 +93,7 @@ export const profileConfig: ProfileConfig = {
 
   seo: {
     title: `${person.name} | ${company.name}`,
-    description: `Digital visiting card for ${person.name} of ${company.name}. Connect by phone, WhatsApp, email or save contact details directly.`,
+    description: `Digital visiting card for ${person.name} of ${company.name}. Connect by phone, WhatsApp, WeChat, email or save contact details directly.`,
     ogTitle: `${person.name} — ${company.name}`,
     ogDescription: `Connect with ${person.name} from ${company.name}.`,
     ogImage: "/og/lee-scents-card.jpg",
