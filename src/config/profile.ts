@@ -24,7 +24,7 @@ const person: ProfileConfig["person"] = {
 };
 
 const company: ProfileConfig["company"] = {
-  name: "Lee Scents",
+  name: "LEE SCENTS PVT LTD",
   tagline: "Premium Fragrance & Aromatic Solutions",
   shortTagline: "Premium Aromatics",
   summary: "Premium fragrance, aromatic and cosmetic ingredient solutions.",
@@ -46,10 +46,10 @@ export const profileConfig: ProfileConfig = {
     whatsappMessage: `Hello ${person.name}, I found your ${company.name} digital card.`,
     wechat: "lesly_19710802",
     email: "leslie@leescents.com",
-    address: "X, XXXXXX, XXXXXXX",
+    address: "16 Station Lane, Udahamulla, Nugegoda",
     country: "Sri Lanka",
     countryCallingCode: "94",
-    mapQuery: "",
+    mapQuery: "6.862572682813449, 79.90931997361079",
   },
 
   links: {
