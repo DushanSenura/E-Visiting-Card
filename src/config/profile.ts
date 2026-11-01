@@ -15,7 +15,7 @@
 import type { ProfileConfig } from "./types";
 
 const person: ProfileConfig["person"] = {
-  honorific: "Mr.",
+  honorific: "Dr.",
   firstName: "Leslie",
   lastName: "Peiris",
   name: "Mr. Leslie Peiris",
