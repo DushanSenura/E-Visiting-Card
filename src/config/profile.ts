@@ -18,7 +18,7 @@ const person: ProfileConfig["person"] = {
   honorific: "Dr.",
   firstName: "Leslie",
   lastName: "Peiris",
-  name: "Mr. Leslie Peiris",
+  name: "Dr. Leslie Peiris",
   position: "Founder / Director",
   photo: "/profile/leslie-peiris.webp",
 };
