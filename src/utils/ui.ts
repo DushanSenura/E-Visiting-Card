@@ -5,7 +5,7 @@ export function cn(...classes: Array<string | false | null | undefined>): string
   return classes.filter(Boolean).join(" ");
 }
 
-/** "Mr. Leslie Peiris" → "LP" (skips honorifics). */
+/** "Dr. Leslie Peiris" → "LP" (skips honorifics). */
 export function initials(firstName: string, lastName: string): string {
   return `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
 }

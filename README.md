@@ -1,6 +1,6 @@
 # Lee Scents — Digital Visiting Card
 
-A premium, mobile-first digital business card for **Mr. Leslie Peiris** of **Lee Scents**.
+A premium, mobile-first digital business card for **Dr. Leslie Peiris** of **Lee Scents**.
 
 Built with React, TypeScript, Vite, Tailwind CSS, Framer Motion, and Lucide icons.
 There is no backend. Everything is a static site.
@@ -29,7 +29,7 @@ npm run preview    # serves /dist locally to test it
 
 ---
 
-## Where to update Mr. Leslie Peiris' details
+## Where to update Dr. Leslie Peiris' details
 
 **Everything lives in one file:**
 

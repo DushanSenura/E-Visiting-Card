@@ -23,7 +23,7 @@ export interface ProfileConfig {
     honorific: string;
     firstName: string;
     lastName: string;
-    /** Full display name, e.g. "Mr. Leslie Peiris" */
+    /** Full display name, e.g. "Dr. Leslie Peiris" */
     name: string;
     position: string;
     /** Path inside /public, e.g. "/profile/leslie-peiris.webp". Leave empty to show initials. */

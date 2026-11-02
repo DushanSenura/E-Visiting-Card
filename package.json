@@ -2,7 +2,7 @@
   "name": "lee-scents-e-card",
   "private": true,
   "version": "1.0.0",
-  "description": "Digital visiting card for Mr. Leslie Peiris of Lee Scents. Designed & developed by NovaCore Techs.",
+  "description": "Digital visiting card for Dr. Leslie Peiris of Lee Scents. Designed & developed by NovaCore Techs.",
   "type": "module",
   "scripts": {
     "dev": "vite",
